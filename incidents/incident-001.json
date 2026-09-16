@@ -1,5 +1,5 @@
 {
-  "incident_id": "01",
+  "incident_id": "INC-001",
   "type": "CrashLoopBackOff",
   "service": "buildflow-api",
   "symptom": "Container repeatedly restarted",

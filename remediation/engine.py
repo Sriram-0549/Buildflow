@@ -35,18 +35,6 @@ if mode == "human_approval":
     approval = input("\nApprove remediation? (yes/no): ")
 
     if approval.lower() == "yes":
-        print("✅ Approval granted")
-    else:
-        print("❌ Remediation cancelled")
-
-if mode == "human_approval":
-    print("\n⚠️ Human approval required")
-    print("Action:", action)
-    print("Risk:", risk)
-
-    approval = input("\nApprove remediation? (yes/no): ")
-
-    if approval.lower() == "yes":
 
         print("\n✅ Approval granted")
         print("Applying remediation...")
@@ -56,6 +44,12 @@ if mode == "human_approval":
                 "template": {
                     "spec": {
                         "containers": [
+if mode == "human_approval":
+    print("\n⚠️ Human approval required")
+    print("Action:", action)
+    print("Risk:", risk)
+
+    approval = input("\nApprove remediation? (yes/no): ")
                             {
                                 "name": "crash-test",
                                 "command": None,

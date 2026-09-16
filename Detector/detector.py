@@ -1,5 +1,9 @@
 import requests
+import sys
 
+sys.path.append(".")
+
+from incidents.incident_manager import create_incident
 
 # ==========================================
 # PROMETHEUS CONNECTION
@@ -72,19 +76,22 @@ for result in results:
 
     if state_results:
 
-        incident = {
-            "type": "CrashLoopBackOff",
-            "namespace": "buildflow",
-            "pod": pod,
-            "container": container,
-            "restart_count": restart_count,
-            "status": "detected"
-        }
+    incident = {
+        "type": "CrashLoopBackOff",
+        "namespace": "buildflow",
+        "pod": pod,
+        "container": container,
+        "restart_count": restart_count,
+        "status": "detected"
+    }
 
-        print("🚨 INCIDENT DETECTED")
+    print("🚨 INCIDENT DETECTED")
+    print(incident)
 
-        print(incident)
+    incident_id = create_incident(
+        "CrashLoopBackOff",
+        "buildflow-api",
+        f"Pod {pod} entered CrashLoopBackOff"
+    )
 
-    else:
-
-        print("Healthy")
+    print("Incident ID:", incident_id)
