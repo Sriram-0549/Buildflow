@@ -1,6 +1,5 @@
 import json
 import time
-import requests
 from kubernetes import client, config
 from kubernetes.stream import stream
 
