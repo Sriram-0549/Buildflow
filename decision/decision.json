@@ -1,0 +1,9 @@
+{
+    "root_cause": "Container startup process is failing",
+    "confidence": 90,
+    "decision": {
+        "action": "Inspect and correct container startup configuration",
+        "risk": "medium",
+        "mode": "human_approval"
+    }
+}

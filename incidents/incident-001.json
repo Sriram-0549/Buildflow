@@ -1,0 +1,15 @@
+{
+  "incident_id": "01",
+  "type": "CrashLoopBackOff",
+  "service": "buildflow-api",
+  "symptom": "Container repeatedly restarted",
+  "evidence": [
+    "Pod entered CrashLoopBackOff",
+    "Container started and terminated repeatedly",
+    "Kubernetes reported BackOff",
+    "Container exited with code 1"
+  ],
+  "root_cause": "Container startup command exited with code 1",
+  "remediation": "Changed the container startup command",
+  "status": "resolved"
+}

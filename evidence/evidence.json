@@ -1,0 +1,49 @@
+{
+    "pod": {
+        "name": "crash-test-789c9d6794-gb8tb",
+        "status": "Running",
+        "container": {
+            "name": "crash-test",
+            "restart_count": 7,
+            "state": "Waiting",
+            "reason": "CrashLoopBackOff",
+            "last_exit_code": 1,
+            "last_reason": "Error"
+        },
+        "command": [
+            "sh",
+            "-c"
+        ],
+        "args": [
+            "exit 1"
+        ]
+    },
+    "events": [
+        {
+            "reason": "Scheduled",
+            "message": "Successfully assigned buildflow/crash-test-789c9d6794-gb8tb to minikube"
+        },
+        {
+            "reason": "BackOff",
+            "message": "Back-off restarting failed container crash-test in pod crash-test-789c9d6794-gb8tb_buildflow(1a7e8a70-b1f9-4da1-ac60-650f16efcc20)"
+        },
+        {
+            "reason": "Pulled",
+            "message": "Container image \"buildflow-api\" already present on machine and can be accessed by the pod"
+        },
+        {
+            "reason": "Created",
+            "message": "Container created"
+        },
+        {
+            "reason": "Started",
+            "message": "Container started"
+        }
+    ],
+    "metrics": {
+        "pod": "crash-test-789c9d6794-gb8tb",
+        "container": "crash-test",
+        "restart_count": "7"
+    },
+    "logs": []
+}

@@ -1,0 +1,14 @@
+{
+    "pod": "crash-test-7dbd768f74-jvsln",
+    "pod_status": "Running",
+    "restart_count_before": 1,
+    "restart_count_after": 1,
+    "health_status": 200,
+    "health_response": "healthy",
+    "recovery": "confirmed",
+    "reason": [
+        "Pod is Running",
+        "Restart count remained stable",
+        "Application /health endpoint returned healthy"
+    ]
+}

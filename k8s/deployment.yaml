@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: buildflow-api
+spec:
+    replicas: 3
+    selector:  
+      matchLabels:
+        app: buildflow-api
+    
+    template:
+      metadata:
+        labels:
+          app: buildflow-api
+      spec:
+        containers:
+          - name: buildflow-api
+            image: buildflow-api
+            imagePullPolicy: Never
+            ports: 
+              - containerPort: 5000
+            readinessProbe:
+              httpGet:
+                path: /health
+                port: 5000

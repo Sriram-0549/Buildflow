@@ -1,0 +1,61 @@
+{
+    "pod": {
+        "name": "crash-test-789c9d6794-42blc",
+        "status": "Running",
+        "container": {
+            "name": "crash-test",
+            "restart_count": 115,
+            "state": "Waiting",
+            "reason": "CrashLoopBackOff",
+            "last_exit_code": 1,
+            "last_reason": "Error"
+        },
+        "command": [
+            "sh",
+            "-c"
+        ],
+        "args": [
+            "exit 1"
+        ]
+    },
+    "events": [
+        {
+            "reason": "Pulled",
+            "message": "Container image \"buildflow-api\" already present on machine and can be accessed by the pod"
+        },
+        {
+            "reason": "Created",
+            "message": "Container created"
+        },
+        {
+            "reason": "BackOff",
+            "message": "Back-off restarting failed container crash-test in pod crash-test-789c9d6794-42blc_buildflow(42cb3f14-4366-4b79-826b-71441daaf9d5)"
+        },
+        {
+            "reason": "SandboxChanged",
+            "message": "Pod sandbox changed, it will be killed and re-created."
+        },
+        {
+            "reason": "Pulled",
+            "message": "Container image \"buildflow-api\" already present on machine and can be accessed by the pod"
+        },
+        {
+            "reason": "Created",
+            "message": "Container created"
+        },
+        {
+            "reason": "Started",
+            "message": "Container started"
+        },
+        {
+            "reason": "BackOff",
+            "message": "Back-off restarting failed container crash-test in pod crash-test-789c9d6794-42blc_buildflow(42cb3f14-4366-4b79-826b-71441daaf9d5)"
+        }
+    ],
+    "metrics": {
+        "pod": "crash-test-789c9d6794-42blc",
+        "container": "crash-test",
+        "restart_count": "115"
+    },
+    "logs": []
+}

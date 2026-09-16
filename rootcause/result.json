@@ -1,0 +1,22 @@
+{
+    "root_cause": "Container startup process is failing",
+    "confidence": 90,
+    "reasoning": [
+        "Container is in CrashLoopBackOff",
+        "Container exited with code 1",
+        "Container startup arguments explicitly contain 'exit 1'",
+        "Kubernetes reported repeated container restart backoff"
+    ],
+    "candidates": [
+        {
+            "root_cause": "Container startup process is failing",
+            "score": 90,
+            "reasoning": [
+                "Container is in CrashLoopBackOff",
+                "Container exited with code 1",
+                "Container startup arguments explicitly contain 'exit 1'",
+                "Kubernetes reported repeated container restart backoff"
+            ]
+        }
+    ]
+}

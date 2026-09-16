@@ -1,0 +1,37 @@
+{
+    "incident_id": "INC-001",
+    "created_at": "2026-09-10T13:35:33.400924",
+    "incident": {
+        "type": "CrashLoopBackOff",
+        "service": "buildflow-api",
+        "symptom": "Container repeatedly restarted",
+        "status": "resolved"
+    },
+    "root_cause_analysis": {
+        "root_cause": "Container exceeded its memory limit",
+        "confidence": 90,
+        "reasoning": [
+            "Kubernetes reported OOMKilled",
+            "Container has restarted repeatedly after memory termination"
+        ]
+    },
+    "decision": {
+        "action": "Investigate and increase memory limit",
+        "risk": "medium",
+        "mode": "human_approval"
+    },
+    "remediation": {
+        "status": "applied",
+        "description": "Kubernetes Deployment was patched to correct the startup configuration"
+    },
+    "recovery": {
+        "status": "confirmed",
+        "pod": "crash-test-7dbd768f74-jvsln",
+        "pod_status": "Running",
+        "restart_count_before": 0,
+        "restart_count_after": 0,
+        "health_status": 200,
+        "health_response": "healthy"
+    },
+    "final_status": "resolved"
+}
